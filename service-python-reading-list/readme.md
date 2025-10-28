@@ -2,7 +2,7 @@
 
 ## Repository File Structure
 
-The below table gives a brief overview of the important files in the service.\
+The below table gives a brief overview of the important files in the servicde.\
 Note: The following file paths are relative to the path /python/rest-api/
 
 | Filepath               | Description                                                                                                                                                  |
