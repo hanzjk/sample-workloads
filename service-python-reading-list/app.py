@@ -14,7 +14,11 @@ def generate_id():
 # endpoint to get all books
 @app.route('/reading-list/books', methods=['GET'])
 def get_books():
-    return jsonify({'books': books})
+    app_mode = os.getenv("APP_MODE", "not-set")
+    return jsonify({
+        'app_mode': app_mode,
+        'books': books
+    })
 
 # endpoint to add a new book
 @app.route('/reading-list/books', methods=['POST'])
