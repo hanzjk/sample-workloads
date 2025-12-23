@@ -1,6 +1,6 @@
 # Copyright 2025 The OpenChoreo Authors
 # SPDX-License-Identifier: Apache-2.0
-
+import os
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -15,6 +15,7 @@ def generate_id():
 @app.route('/reading-list/books', methods=['GET'])
 def get_books():
     app_mode = os.getenv("APP_MODE", "not-set")
+    print(f"app_mode: {app_mode}")
     return jsonify({
         'app_mode': app_mode,
         'books': books
